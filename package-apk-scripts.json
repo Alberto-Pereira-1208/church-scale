@@ -1,0 +1,11 @@
+{
+  "scripts": {
+    "build:apk:debug": "pnpm build && cd android && ./gradlew assembleDebug",
+    "build:apk:release": "pnpm build && cd android && ./gradlew assembleRelease",
+    "build:apk": "bash build-apk.sh debug",
+    "install:apk": "adb install android/app/build/outputs/apk/debug/app-debug.apk",
+    "run:android": "pnpm build:apk && pnpm install:apk",
+    "cap:sync": "npx cap sync android",
+    "cap:open": "npx cap open android"
+  }
+}
