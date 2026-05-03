@@ -26,14 +26,16 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '22'
-          cache: 'pnpm'
-      
+
       - name: Install pnpm
         run: npm install -g pnpm
-      
+
+      - name: Verify pnpm
+        run: pnpm -v
+
       - name: Install dependencies
         run: pnpm install
-      
+
       - name: Build web app
         run: pnpm build
       
