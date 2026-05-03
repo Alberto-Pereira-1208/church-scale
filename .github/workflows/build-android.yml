@@ -38,6 +38,9 @@ jobs:
 
       - name: Build web app
         run: pnpm build
+        
+      - name: Sync Capacitor
+        run: npx cap sync
       
       - name: Build Android APK (Debug)
         run: |
